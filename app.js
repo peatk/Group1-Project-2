@@ -34,7 +34,7 @@ let myMap = L.map("map", {
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
-62003
+
 L.geoJson(statesData).addTo(myMap);
 
 function getColor(bookCount) {
