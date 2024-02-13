@@ -1,5 +1,12 @@
 console.log(libraryData);
 
+let bubbleData = libraryData[0].Title;
+console.log('this is bubble data');
+console.log(bubbleData);
+
+// iterate through the library to get every title
+// for (let i = 0; i < libraryData.length; i++);
+
 function createFeatures(libraryData) {
 
     let banByState = {};
@@ -17,14 +24,40 @@ function createFeatures(libraryData) {
         }
     });
 
+    console.log('this is the ban by state info');
     console.log(banByState);
     return banByState;
 
 }
 
+// // added the book count by state - having issues with this
+// function createBookCountbyState(libraryData) {
+//     let bookCountbyState = [];
+
+//     libraryData.forEach( item => {
+//        state = item.State;
+//        title = item.Title;
+        
+//         if (bookCountbyState[state]) {
+//             bookCountbyState[state] = {};
+//         }
+
+//         if (bookCountbyState[state][title]) {
+//             bookCountbyState[state][title] += 1;
+//         } else {
+//             bookCountbyState[state][title] ++;
+//         }
+
+//     });
+//     console.log('this is the book count by state');
+//     console.log(bookCountbyState);
+// }
 
 let banByState = createFeatures(libraryData);
 init(banByState);
+
+// let bookCountbyState = createBookCountbyState(libraryData);
+// init(bookCountbyState);
 
 let myMap = L.map("map", {
     center: [39.833, -98.583],
@@ -49,6 +82,14 @@ function getColor(bookCount) {
 function style(feature) {
     let stateName = feature.properties.name;
     let bookCount = banByState[stateName] ? banByState[stateName].bookCount : 0;
+    
+    // added to create the pop up
+
+    // let mostBannedbook = banByState[stateName] ? banByState[stateName].mostBannedbook : 'create function to pull info';
+    let countBannedbook = banByState[stateName] ? banByState[stateName].bookCount : 'No Data';
+    let popupContent = `State: ${stateName} <br> Total Banned Books: ${countBannedbook}`;
+    feature.properties.popupContent = popupContent;
+    
     return {
         fillColor: getColor(bookCount),
         weight: 2,
@@ -59,9 +100,18 @@ function style(feature) {
     };
 }
 
-L.geoJson(statesData, {style: style}).addTo(myMap);
+L.geoJson(statesData, {
+    style: style,
+    // added to code to allow for pop up in the data
+    onEachFeature: function(feature, layer) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}).addTo(myMap);
 
 function init(banByState) {
+    // if(!banByState){
+    //     console.error('banByState is undefined or null');
+    // };
     let dropdownMenu = d3.select("#selDataset");
     Object.keys(banByState).forEach(State => {
         dropdownMenu.append("option")
@@ -69,58 +119,7 @@ function init(banByState) {
                     .property("value", State);
     });
 
+    // book title = y 
+    // book title count = x 
+    // book title count = size
 }
-
-
-
-
-
-
-
-
-
-
-// // JSON data containing latitude and longitude information
-// const jsonData = [
-//     {
-//         "Author": "Àbíké-Íyímídé, Faridah",
-//         "Latitude": 27.994402,
-//         "Longitude": -81.760254,
-//         "Title": "Ace of Spades",
-//         "Date_of_Challenge_or_Removal": 1635724800000,
-//         "District": "Indian River County School District",
-//         "Origin_of_Challenge": "Administrator",
-//         "State": "Florida",
-//         "Type_of_Ban": "Banned in Libraries and Classrooms"
-//         // Other properties...
-//     },
-//     // Other locations...
-// ];
-
-// // Initialize Leaflet map
-// const map = L.map('map').setView([37.8, -96], 4); // Centered on the US
-
-// // Add a tile layer to the map
-// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-// }).addTo(map);
-
-// // Iterate over JSON data and add markers to the map for each location
-// jsonData.forEach(location => {
-//     const { Latitude, Longitude, Author, Title, Date_of_Challenge_or_Removal, District, Origin_of_Challenge, State, Type_of_Ban } = location;
-
-//     // Create a popup with information about the book
-//     const popupContent = `
-//         <b>${Title}</b><br>
-//         Author: ${Author}<br>
-//         Date of Challenge or Removal: ${new Date(Date_of_Challenge_or_Removal).toLocaleDateString()}<br>
-//         District: ${District}<br>
-//         Origin of Challenge: ${Origin_of_Challenge}<br>
-//         State: ${State}<br>
-//         Type of Ban: ${Type_of_Ban}
-//     `;
-
-//     // Add a marker to the map
-//     L.marker([Latitude, Longitude]).addTo(map)
-//         .bindPopup(popupContent);
-// });
