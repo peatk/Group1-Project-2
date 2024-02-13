@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Book Ban</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- <select id="selDataset">
+        <option value ="">Select State</option>
+    </select>
+
+  <div id="map"></div> -->
+    <!-- <select id="selDataset">
+        <option value ="">Select State</option>
+    </select> -->
+
+  <div id="bubbleChartContainer">
+    <canvas id="bubbleChart"></canvas>
+  </div>
+
+  <div>
+    <label for="selState">Select State:</label>
+    <select id="selState">
+      <option value="">All</option>
+    </select>
+</div>
+
+
+
+
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Include other scripts -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <script src="data/us-state.js"></script>
+  <script src="data/Authortitle_banned.js"></script>
+  <script src="bubble.js"></script>
+  
+</body>
+</html>

@@ -1,19 +1,5 @@
 console.log(libraryData);
 
-let bubbleData = libraryData[0].Title;
-console.log('this is bubble data');
-console.log(bubbleData);  
-
-let titleCounts = {};
-// iterate through the library to get every title
-for (let i = 0; i < libraryData.length; i++) {
-    let title = libraryData[i].Title;
-    titleCounts[title] = (titleCounts[title] || 0) +1;
-}
-for (let title in titleCounts) {
-    console.log(`Title: ${title}, Count: ${titleCounts[title]}`);
-}
-
 function createFeatures(libraryData) {
 
     let banByState = {};
@@ -37,34 +23,9 @@ function createFeatures(libraryData) {
 
 }
 
-// // added the book count by state - having issues with this
-// function createBookCountbyState(libraryData) {
-//     let bookCountbyState = [];
-
-//     libraryData.forEach( item => {
-//        state = item.State;
-//        title = item.Title;
-        
-//         if (bookCountbyState[state]) {
-//             bookCountbyState[state] = {};
-//         }
-
-//         if (bookCountbyState[state][title]) {
-//             bookCountbyState[state][title] += 1;
-//         } else {
-//             bookCountbyState[state][title] ++;
-//         }
-
-//     });
-//     console.log('this is the book count by state');
-//     console.log(bookCountbyState);
-// }
-
 let banByState = createFeatures(libraryData);
 init(banByState);
 
-// let bookCountbyState = createBookCountbyState(libraryData);
-// init(bookCountbyState);
 
 let myMap = L.map("map", {
     center: [39.833, -98.583],
@@ -125,8 +86,6 @@ function init(banByState) {
                     .text(State)
                     .property("value", State);
     });
-
-    // book title = y 
-    // book title count = x 
-    // book title count = size
 }
+
+
