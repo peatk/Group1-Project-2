@@ -2,10 +2,17 @@ console.log(libraryData);
 
 let bubbleData = libraryData[0].Title;
 console.log('this is bubble data');
-console.log(bubbleData);
+console.log(bubbleData);  
 
+let titleCounts = {};
 // iterate through the library to get every title
-// for (let i = 0; i < libraryData.length; i++);
+for (let i = 0; i < libraryData.length; i++) {
+    let title = libraryData[i].Title;
+    titleCounts[title] = (titleCounts[title] || 0) +1;
+}
+for (let title in titleCounts) {
+    console.log(`Title: ${title}, Count: ${titleCounts[title]}`);
+}
 
 function createFeatures(libraryData) {
 
