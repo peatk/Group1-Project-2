@@ -1,8 +1,10 @@
-
+let data = {};
 d3.json("data/author_title.json").then((importedData) => {
   state = 'Wisconsin';
+  data = importedData;
   titleByState(importedData, state);
   authorByState(importedData, state);
+  
   
 });
 
@@ -133,3 +135,18 @@ function authorByState(importedData, state) {
   // Render the plot to the div tag with the id of "plot".
   Plotly.newPlot("author", chartData, layout);
 }
+let uniqueStates = ['All','California','Wisconsin','New York','Florida', 'Texas']
+const dropdownMenu = document.getElementById('selState');
+uniqueStates.forEach(state => {
+    const option = document.createElement('option');
+    option.text = state;
+    dropdownMenu.appendChild(option);
+});
+
+// Event listener for dropdown change
+dropdownMenu.addEventListener('change', function() {
+    const selectedState = dropdownMenu.value;
+    titleByState(data, selectedState);
+    authorByState(data, selectedState);
+    
+});
