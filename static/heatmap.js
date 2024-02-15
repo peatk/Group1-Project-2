@@ -1,4 +1,4 @@
-fetch('./data/coordinates.json')
+fetch('/api/coordinates')
     .then((response) => response.json())
     .then((jsonData) => {
         // Adding map
