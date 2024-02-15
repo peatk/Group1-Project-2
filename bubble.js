@@ -112,7 +112,7 @@ uniqueStates.forEach(state => {
 });
 
 
-var data = [{
+let data = [{
     x: stateCountsArray.map(item => item.state), 
     y: stateCountsArray.map(item => item.count), 
     mode: 'markers',
@@ -125,11 +125,10 @@ var data = [{
     text: stateCountsArray.map(item => `${item.state}: ${item.count} bans`), // Hover text
   }];
   
-  var layout = {
+let layout = {
     title: 'Banned Books Count by State',
     xaxis: {title: 'State'},
     yaxis: {title: 'Count of Banned Books'},
-    showlegend: false,
     height: 600,
     width: 1000
   };
