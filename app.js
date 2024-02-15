@@ -31,6 +31,15 @@ function createFeatures(libraryData) {
         }
     });
 
+    // let banByTitle = {};
+    // libraryData.forEach(item => {
+    //     if (banByTitle[item.Title] && banByTitle[item.State]) {
+    //         banByTitle[item.Title].bookCount += 1;
+    //     } else {
+    //         banByState
+    //     }
+    // })
+
     console.log('this is the ban by state info');
     console.log(banByState);
     return banByState;
@@ -148,9 +157,6 @@ legend.onAdd = function() {
 
 legend.addTo(myMap);
 
-
-
-
 function init(banByState) {
     // if(!banByState){
     //     console.error('banByState is undefined or null');
@@ -161,8 +167,17 @@ function init(banByState) {
                     .text(State)
                     .property("value", State);
     });
+    updatePlot(banByState, banByState.State[0]);
 
     // book title = y 
     // book title count = x 
     // book title count = size
 }
+
+function updatePlot(libraryData, State) {
+    let booktitle = libraryData.Title += 0;
+
+
+}
+ 
+
