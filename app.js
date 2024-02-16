@@ -121,6 +121,47 @@ legend.onAdd = function() {
 
 legend.addTo(myMap);
 
+// let typeBan = {};
+// libraryData.forEach(item => {
+//     if(!typeBan[item.State]) {
+//         typeBan[item.State] = {};
+//     }
+//     if (!typeBan[item.State][item.Type_of_Ban]) {
+//         typeBan[item.State][item.Type_of_Ban] = 0;
+//     }
+//     typeBan[item.State][item.Type_of_Ban]++;
+// });
+// const stateSelector = document.getElementById('selDataset');
+
+// stateSelector.addEventListener('change', function() {
+//     let selectedState = this.value;
+//     let state = typeBan[selectedState]
+//     let series = [];
+//     let labels = [];
+
+//     Object.entries(state).forEach(([type,count]) =>{
+//         series.push(count);
+//         labels.push(type);
+//     });
+// })
+
+//     let options = {
+//     series: series,
+//     labels: labels,
+//     chart: {
+//         type:'donut'
+//     }
+//     plotOptions: {
+//         pie: {
+//             expandOnClick:false
+//         }
+//     }
+//   }
+
+//   let chart = new ApexCharts(document,querySelector("#chart"), options);
+//   chart.render();
+
+  
 
 // console.log(libraryData);
 
