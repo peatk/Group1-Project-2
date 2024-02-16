@@ -1,22 +1,21 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heatmap</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Bans By State</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <!-- Leaflet JavaScript code -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <!-- Leaflet heatmap plugin-->
-    <script type="text/javascript" src="static/leaflet-heat.js"></script>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body>
+    <!-- <select id="selDataset">
+        <option value ="">Select State</option>
+    </select> -->
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -27,26 +26,28 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link" href="/index">Home</a>
-              <a class="nav-link active" aria-current="page" href="/heatmap">Heatmap</a>
+              <a class="nav-link" aria-current="page" href="/heatmap">Heatmap</a>
               <a class="nav-link" href="/barchart">Bar Charts</a>
-              <a class="nav-link" href="/statemap">State Map</a>
+              <a class="nav-link active" aria-current="page" href="/statemap">State Map</a>
             </div>
           </div>
         </div>
     </nav>
-
-    <!-- Heatmap Div -->
-    <div id="map" style="width: 750px; height: 700px;"></div>     
-    
+    <div id="map"></div>
     
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <!-- heatmap.js -->
-    <script type="text/javascript" src="static/heatmap.js"></script>
-
     
-
-
+    <!-- D3 & Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+    <!-- State Data JS -->
+    <script type="text/javascript" src="static/us-state.js"></script>
+    <!-- Data JS -->
+    <script type="text/javascript" src="static/Authortitle_banned.js"></script>
+    
+    <!-- Map Javascript -->
+    <script src="static/app.js"></script>
 </body>
 </html>

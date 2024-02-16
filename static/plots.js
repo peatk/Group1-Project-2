@@ -1,7 +1,8 @@
 let data = {};
-d3.json("data/author_title.json").then((importedData) => {
-  state = 'Wisconsin';
+d3.json("/api/authors").then((importedData) => {
+  state = ''
   data = importedData;
+  populateStatesDropdown(data);
   titleByState(importedData, state);
   authorByState(importedData, state);
   
@@ -57,16 +58,20 @@ function titleByState(importedData, state) {
   // Data
   let chartData = [trace1];
 
-  
+
   // Apply the group bar mode to the layout.
   let layout = {
     title: title,
+    width: 800,
+    height: 500,
     margin: {
-      l: 100,
+      l: 300,
       r: 100,
       t: 100,
-      b: 100
-    }
+      b: 100},
+      yaxis: {
+        automargin: true
+      }
   };
 
   // Render the plot to the div tag with the id of "plot".
@@ -124,29 +129,41 @@ function authorByState(importedData, state) {
   // Apply the group bar mode to the layout.
   let layout = {
     title: title,
+    width: 800,
+    height: 500,
     margin: {
-      l: 100,
+      l: 300,
       r: 100,
       t: 100,
-      b: 100
-    }
+      b: 100},
+      yaxis: {
+        automargin: true
+      }
   };
 
   // Render the plot to the div tag with the id of "plot".
   Plotly.newPlot("author", chartData, layout);
 }
-let uniqueStates = ['All','California','Wisconsin','New York','Florida', 'Texas']
-const dropdownMenu = document.getElementById('selState');
-uniqueStates.forEach(state => {
-    const option = document.createElement('option');
-    option.text = state;
-    dropdownMenu.appendChild(option);
-});
+function populateStatesDropdown(authorsData) {
+  let uniqueStates = []
 
-// Event listener for dropdown change
-dropdownMenu.addEventListener('change', function() {
+  authorsData.forEach(book => {
+    if (!uniqueStates.includes(book['State'])) {
+      uniqueStates.push(book['State']);
+    }
+  });
+  uniqueStates.sort();
+  const dropdownMenu = document.getElementById('selState');
+  uniqueStates.forEach(state => {
+      const option = document.createElement('option');
+      option.text = state;
+      dropdownMenu.appendChild(option);
+  });
+  // Event listener for dropdown change
+  dropdownMenu.addEventListener('change', function() {
     const selectedState = dropdownMenu.value;
     titleByState(data, selectedState);
     authorByState(data, selectedState);
-    
-});
+  });
+
+};
