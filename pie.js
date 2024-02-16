@@ -11,6 +11,20 @@ libraryData.forEach(item => {
     typeBan[item.State][item.Type_of_Ban]++;
 });
 
+function init(typeBan) {
+    // if(!banByState){
+    //     console.error('banByState is undefined or null');
+    // };
+    let dropdownMenu = d3.select("#selDataset");
+    Object.keys(typeBan).forEach(State => {
+        dropdownMenu.append("option")
+                    .text(State)
+                    .property("value", State);
+    });
+    
+}
+init(typeBan);
+
 const stateSelector = document.getElementById('selDataset');
 
 stateSelector.addEventListener('change', function() {
@@ -30,7 +44,7 @@ stateSelector.addEventListener('change', function() {
         chart: {
             type: 'donut',
         },
-        colors: ['#08519c', '#3182bd', '#6baed6', '#9ecae1'], // Corrected the color codes
+        colors: ['#08519c', '#3182bd', '#6baed6', '#9ecae1'], 
         plotOptions: {
             pie: {
                 expandOnClick: false,
@@ -43,7 +57,6 @@ stateSelector.addEventListener('change', function() {
         }
     };
 
-    // Ensure to clean up the previous chart before rendering a new one
     document.querySelector("#chart").innerHTML = "";
 
     let chart = new ApexCharts(document.querySelector("#chart"), options);
