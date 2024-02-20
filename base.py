@@ -9,12 +9,18 @@ def welcome():
   """List all available api routes."""
   return (
     f"Available Routes:<br/>"
+    f"/index<br/>"
     f"/barchart<br/>"
     f"/heatmap<br/>"
     f"/api/data<br/>"
     f"/api/authors<br/>"
     f"/api/coordinates<br/>"
   )
+
+# index page
+@app.route("/index")
+def home():
+    return render_template('index.html')
 
 # barchart page
 @app.route("/barchart")
