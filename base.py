@@ -6,10 +6,13 @@ app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 @app.route("/")
 def welcome():
-  """List all available api routes."""
+  """ALL AVAILABLE ROUTES"""
   return (
     f"Available Routes:<br/>"
     f"/index<br/>"
+    f"/statemap<br/>"
+    f"/piechart<br/>"
+    f"/barviews<br/>"
     f"/barchart<br/>"
     f"/heatmap<br/>"
     f"/api/data<br/>"
@@ -27,6 +30,11 @@ def home():
 def barchart():
     return render_template('barchart.html')
 
+# state barchart page
+@app.route("/barviews")
+def barviews():
+    return render_template('barviews.html')
+
 # heatmap page
 @app.route("/heatmap")
 def heatmap():
@@ -36,6 +44,11 @@ def heatmap():
 @app.route("/statemap")
 def statemap():
     return render_template('statemap.html')
+
+# pie chart page
+@app.route("/piechart")
+def piechart():
+    return render_template('piechart.html')
 
 @app.route('/api/authors')
 # @app.route('/api/data', methods=['GET'])

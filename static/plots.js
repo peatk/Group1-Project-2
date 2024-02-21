@@ -41,9 +41,9 @@ function titleByState(importedData, state) {
 
   let title = '';
   if(state == '') {
-    title = "Top Titles banned"
+    title = "Top Titles Banned"
   } else {
-    title = `Top Title banned in ${state}`
+    title = `Top Title Banned in ${state}`
   }
   // Trace1 for the car miles data.
   let trace1 = {
@@ -52,7 +52,10 @@ function titleByState(importedData, state) {
     text: data.map(row => row.count),
     name: title,
     type: "bar",
-    orientation: "h"
+    orientation: "h",
+    marker: {
+      color: "rgba(245, 99, 75, 1)"
+    }
   };
 
   // Data
@@ -108,9 +111,9 @@ function authorByState(importedData, state) {
 
   let title = '';
   if(state == '') {
-    title = "Top Authors banned"
+    title = "Top Authors Banned"
   } else {
-    title = `Top Authors banned in ${state}`
+    title = `Top Authors Banned in ${state}`
   }
 
   // Trace1 for the car miles data.
