@@ -13,3 +13,7 @@ Our analysis revealed alarming trends in the prevalence and nature of book bans 
 ### Installation
 
 Our data analysis uses flask and thus requires all dependencies related to that. Through your terminal run ```python base.py``` and launch in your browser to display routes. To see the home page, add ```/index``` in your browser.
+
+### Credit
+
+Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. Template for website pages is [GymFit](https://demo.themefisher.com/gymfit/).
