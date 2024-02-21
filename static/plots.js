@@ -5,7 +5,7 @@ d3.json("/api/authors").then((importedData) => {
   populateStatesDropdown(data);
   titleByState(importedData, state);
   authorByState(importedData, state);
-  frequencyChart(importedData);
+  frequencyChart(importedData, state);
   topStates(importedData);
   
 });
@@ -73,7 +73,7 @@ function topStates(data) {
     height: 500,
     margin: {
       l: 300,
-      r: 300,
+      r: 100,
       t: 150,
       b: 100
     }
@@ -85,26 +85,23 @@ function topStates(data) {
 
 
 }
-function frequencyChart(data){
-  let x = [];
+function frequencyChart(data, state){
+  let x = [0,0,0,0,0,0,0,0,0,0,0,0];
   
   let bins = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec'"];
   for (let i = 0; i < data.length; i++) {
     ban = data[i];
     let banDate =new Date(ban['Date_of_Challenge_or_Removal'] );
-    x.push(banDate.getUTCMonth());
+    if(state == '' || ban.State == state) {
+    x[banDate.getUTCMonth()]++ ;
+    }
   };
   
-  x.sort(function(a, b) {
-    return a - b;
-});
-  
-  xByMonth=[];
-  x.forEach(m => xByMonth.push(bins[m]))
- 
+
 let trace = {
-    x: xByMonth,
-    type: 'histogram'
+    x: bins,
+    y: x,
+    type: 'bar'
   };
   let layout = {
     title: "Books banned by month",
@@ -280,6 +277,7 @@ function populateStatesDropdown(authorsData) {
     const selectedState = dropdownMenu.value;
     titleByState(data, selectedState);
     authorByState(data, selectedState);
+    frequencyChart(data, selectedState);
   });
 
 };
