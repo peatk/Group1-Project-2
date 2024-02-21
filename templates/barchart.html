@@ -63,7 +63,7 @@
 						aria-expanded="false">Bar Charts</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="/barviews">Overview</a></li>
-						<li><a class="dropdown-item active" href="/barchart">By State</a></li>
+						<li><a class="dropdown-item active" href="/barchart">Details</a></li>
 					</ul>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="/heatmap">Heatmap</a></li>
@@ -99,23 +99,70 @@
 <!-- Section About start -->
 <section class="section about">
 	<div class="container">
-		<label for="selState">Select State:</label>
-    	<select id="selState">
-        <option value="">All</option>
-        <!-- Add more options here -->
-    	</select>
-		<div class="row">
-			<div id="author"></div>
-			<div id="title"></div>
-		</div>
 		<div class="row"></div>
-			<div id="freq"></div>
-			<div id="topstates"></div>
+			<div class="col-lg-4 col-md-6" id="freq"></div>
+			<div class="col-lg-4 col-md-6" id="topstates"></div>
 		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<label for="selState">Select State:</label>
+				<select id="selState">
+				<option value="">All</option>
+				<!-- Add more options here -->
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6" id="author"></div>
+			<div class="col-lg-4 col-md-6" id="title"></div>
+		</div>
+		
 	</div>
 </section>
 <!-- Section About End -->
+<!-- Why choose us Start -->
+<section class="section why">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="section-title">
+					<div class="divider mb-3"></div>
+					<h2>What This Means</h2>
+				</div>
+			</div>
+		</div>
 
+		<div class="row ">
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-4 text-center border-0 mb-4 rounded-0">
+					<h3 class="mt-3">Frequency</h3>
+					<p class="mt-3 mb-4">The bans are mostly done in the winter months and start of school year.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-4 text-center border-0 mb-4 rounded-0">
+					<h3 class="mt-3">Low activity</h3>
+					<p class="mt-3 mb-4">Not much activity during summer months.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-4 text-center border-0 mb-4 rounded-0">
+					<h3 class="mt-3">Top 4 states</h3>
+					<p class="mt-3 mb-4">The top authors and books banned are varied in top 4 states.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-4 text-center border-0 mb-4 rounded-0">
+					<h3 class="mt-3">State-Wise</h3>
+					<p class="mt-3 mb-4">We can drill down per state and observer the top 10 authors and books banned in each state.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- Why choose us End -->
 
 
    </div>
