@@ -68,7 +68,7 @@ function topStates(data) {
   // Data
   let chartData = [trace1, trace2];
   let layout = {
-    title: "Top banned Author and Title in top 4 banning states",
+    title: "TOP BANNED AUTHOR AND TITLE IN TOP 4 BANNING STATES",
     width: 1200,
     height: 500,
     margin: {
