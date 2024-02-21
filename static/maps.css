@@ -1,0 +1,38 @@
+#map {
+    width: 100%;
+    height: 750px;
+}
+
+#chart {
+    width: 100%;
+    height: 500px;
+}
+
+#plotlyBarChart {
+    width: 100%;
+    height: 500px;
+}
+
+
+#author {
+    width: 100%;
+    height: 500px;
+    text-transform: uppercase;
+}
+
+#title {
+    width: 100%;
+    height: 500px;
+    text-transform: uppercase;
+}
+
+#freq {
+    width: 100%;
+    height: 500px;
+    text-transform: uppercase;
+}
+
+#topstates {
+    width: 100%;
+    height: 500px;
+}
