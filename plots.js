@@ -4,9 +4,34 @@ d3.json("data/author_title.json").then((importedData) => {
   data = importedData;
   titleByState(importedData, state);
   authorByState(importedData, state);
-  
+  frequencyChart(importedData);
   
 });
+function frequencyChart(data){
+  let x = [];
+  
+  let bins = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec'"];
+  for (let i = 0; i < data.length; i++) {
+    ban = data[i];
+    let banDate =new Date(ban['Date_of_Challenge_or_Removal'] );
+    x.push(banDate.getUTCMonth());
+  };
+  
+  x.sort(function(a, b) {
+    return a - b;
+});
+  
+  xByMonth=[];
+  x.forEach(m => xByMonth.push(bins[m]))
+ 
+let trace = {
+    x: xByMonth,
+    type: 'histogram'
+  };
+var data = [trace];
+Plotly.newPlot('freq', data);
+}
+
 
 function compareByCount(a, b) {
   return b.count - a.count;
