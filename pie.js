@@ -11,29 +11,11 @@ libraryData.forEach(item => {
     typeBan[item.State][item.Type_of_Ban]++;
 });
 
-function init(typeBan) {
-    // if(!banByState){
-    //     console.error('banByState is undefined or null');
-    // };
-    let dropdownMenu = d3.select("#selDataset");
-    Object.keys(typeBan).forEach(State => {
-        dropdownMenu.append("option")
-                    .text(State)
-                    .property("value", State);
-    });
-    
-}
-init(typeBan);
-
-const stateSelector = document.getElementById('selDataset');
-
-stateSelector.addEventListener('change', function() {
-    let selectedState = this.value;
-    let state = typeBan[selectedState];
+function updateChart(data) {
     let series = [];
     let labels = [];
 
-    Object.entries(state).forEach(([type, count]) => {
+    Object.entries(data).forEach(([type, count]) => {
         series.push(count);
         labels.push(type);
     });
@@ -61,5 +43,33 @@ stateSelector.addEventListener('change', function() {
 
     let chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
+}
+
+function init(typeBan) {
+    let dropdownMenu = d3.select("#selDataset");
+    Object.keys(typeBan).forEach(State => {
+        dropdownMenu.append("option")
+                    .text(State)
+                    .property("value", State);
+    });
+    
+    let aggregatedData = {};
+    Object.values(typeBan).forEach(state => {
+        Object.entries(state).forEach(([type, count]) => {
+            if (!aggregatedData[type]) {
+                aggregatedData[type] = 0;
+            }
+            aggregatedData[type] += count;
+        });
+    });
+    updateChart(aggregatedData);
+}
+
+const stateSelector = document.getElementById('selDataset');
+stateSelector.addEventListener('change', function() {
+    let selectedState = this.value;
+    let stateData = typeBan[selectedState];
+    updateChart(stateData);
 });
 
+init(typeBan);
