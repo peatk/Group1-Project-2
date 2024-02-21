@@ -8,3 +8,8 @@ Our project delved into an analysis of banned books within the United States edu
 ### Key Findings and Insights
 
 Our analysis revealed alarming trends in the prevalence and nature of book bans across various school districts in the United States. Over the nine-month period covered, a total of 1,586 instances of individual books being banned were recorded, affecting 1,145 unique book titles. These bans manifested in different forms, including removals from school libraries, prohibitions in classrooms, and restrictions during investigations prompted by challenges from parents, educators, administrators, or lawmakers. Particularly troubling was the finding that the vast majority of bans (98%) deviated from established best practice guidelines designed to protect students' First Amendment rights. Additionally, the data showcased a disproportionate targeting of books by or about marginalized communities, including people of color, LGBTQ+ individuals, and persons with disabilities, underscoring concerns about censorship and representation in school curricula. Through our visualization efforts, we aimed to amplify awareness of these trends and advocate for the preservation of free expression and access to diverse literature in educational environments.
+
+
+### Installation
+
+Our data analysis uses flask and thus requires all dependencies related to that. Through your terminal run ```python base.py``` and launch in your browser to display routes. To see the home page, add ```/index``` in your browser.
