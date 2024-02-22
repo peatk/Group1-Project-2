@@ -38,9 +38,9 @@ Choropleth Refernce: [Leaflet](https://leafletjs.com/examples/choropleth/)
 
 Code Assistance: 
     
-    1. [ChatGPT](https://chat.openai.com/) 
+    [ChatGPT](https://chat.openai.com/) 
 
-    2. EdX Instructors
+    EdX Instructors
 
 ### Credit
 Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. 
