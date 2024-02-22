@@ -12,8 +12,7 @@ Our analysis revealed alarming trends in the prevalence and nature of book bans 
 
 ### Installation
 
-Our data analysis uses flask and thus requires all dependencies related to that. Clone the repository, and navigate in your terminal to main. Through your terminal run ```python base.py``` and launch in your browser to display available API routes. To navigate to our home page, add ```/index``` in your browser url.
-
+Follow the steps below to access our Book Ban Webpage:
     1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
     2. Clone the repository containing the necessary files.
     3. Using your terminal, navigate to the main directory of the cloned repository.
