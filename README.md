@@ -54,8 +54,4 @@ Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pall
 
 
 
-
-
 ETL workflow with diagrams or ERD - i think t
-
-At least one paragraph summarizing efforts for ethical considerations made in the project
