@@ -12,8 +12,32 @@ Our analysis revealed alarming trends in the prevalence and nature of book bans 
 
 ### Installation
 
-Our data analysis uses flask and thus requires all dependencies related to that. Through your terminal run ```python base.py``` and launch in your browser to display routes. To see the home page, add ```/index``` in your browser.
+Our data analysis uses flask and thus requires all dependencies related to that. Clone the repository, and navigate in your terminal to main. Through your terminal run ```python base.py``` and launch in your browser to display available API routes. To navigate to our home page, add ```/index``` in your browser url.
+
+    1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
+    2. Clone the repository containing the necessary files.
+    3. Using your terminal, navigate to the main directory of the cloned repository.
+    4. Execute the command python base.py in your terminal to initiate the Flask application.
+    5. Launch your preferred web browser and enter the appropriate URL to display the available API routes.
+    6. To access our home page, append /index to the browser's URL and navigate accordingly.
+    7. Happy browsing!!
 
 ### Credit
 
 Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. Template for website pages is [GymFit](https://demo.themefisher.com/gymfit/).
+
+
+
+An overview of the project and its purpose - done
+
+
+
+Documentation of the database used and why (e.g. benefits of SQL or NoSQL for this project)
+
+ETL workflow with diagrams or ERD
+
+At least one paragraph summarizing efforts for ethical considerations made in the project
+
+References for the data source(s)
+
+References for any code used that is not your own
