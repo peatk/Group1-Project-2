@@ -34,7 +34,7 @@ Data Reference:
 
 1. [Pen America: A Freedom To Write](https://pen.org/banned-in-the-usa/#what)
 
-Template Referemces: 
+Template References: 
 1. [GymFit](https://demo.themefisher.com/gymfit/).
 
 2. [Leaflet](https://leafletjs.com/examples/choropleth/)
