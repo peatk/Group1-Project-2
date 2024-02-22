@@ -14,13 +14,13 @@ Our analysis revealed alarming trends in the prevalence and nature of book bans 
 
 Follow the steps below to access our Book Ban Webpage
 
-    1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
-    2. Clone the repository containing the necessary files.
-    3. Using your terminal, navigate to the main directory of the cloned repository.
-    4. Execute the command 'python base.py' in your terminal to initiate the Flask application.
-    5. Launch your a chrome web browser and enter the appropriate URL to display the available API routes.
-    6. To access our home page, append /index to the browser's URL and navigate accordingly.
-    7. Happy browsing!!
+1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
+2. Clone the repository containing the necessary files.
+3. Using your terminal, navigate to the main directory of the cloned repository.
+4. Execute the command 'python base.py' in your terminal to initiate the Flask application.
+5. Launch your a chrome web browser and enter the appropriate URL to display the available API routes.
+6. To access our home page, append /index to the browser's URL and navigate accordingly.
+7. Happy browsing!!
 
 ### Database
 Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our database which offers structured data management, efficient querying, scalability, and data integrity. These benefits facilitate data storage, management, analysis, and ensure the consistency, security, and reliability of the stored data compared to the raw .xlsx file.
@@ -32,9 +32,14 @@ Transparency regarding the criteria and motivations behind book bans is crucial 
 ### References
 Data Reference: [Pen America: A Freedom To Write](https://pen.org/banned-in-the-usa/#what)
 
-Website Template: [GymFit](https://demo.themefisher.com/gymfit/).
+Template Referemces: 
+1. [GymFit](https://demo.themefisher.com/gymfit/).
 
-Choropleth Refernce: [Leaflet](https://leafletjs.com/examples/choropleth/)
+2. [Leaflet](https://leafletjs.com/examples/choropleth/)
+
+3. [Donut Chart](https://apexcharts.com/docs/chart-types/pie-donut/#general)
+
+4. [Plotly Bar Chart](https://plotly.com/javascript/bar-charts/)
 
 Code Assistance: 
     
