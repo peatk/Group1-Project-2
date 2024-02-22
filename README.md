@@ -25,10 +25,16 @@ Follow the steps below to access our Book Ban Webpage
 ### Database
 Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our database which offers structured data management, efficient querying, scalability, and data integrity. These benefits facilitate data storage, management, analysis, and ensure the consistency, security, and reliability of the stored data compared to the raw .xlsx file.
 
+### Ethical Considerations
+
+Transparency regarding the criteria and motivations behind book bans is crucial for fostering informed debate and safeguarding intellectual freedom. Additionally, ethical frameworks should prioritize the promotion of diversity and inclusion, recognizing that censorship disproportionately impacts marginalized voices and perpetuates systemic biases. Ultimately, any analysis of book ban data must be guided by a commitment to upholding democratic principles and protecting the rights of all individuals to engage with a wide range of ideas and perspectives.
+
 ### References
 Data references: https://pen.org/banned-in-the-usa/#what
 
 Website template: [GymFit](https://demo.themefisher.com/gymfit/).
+
+Choropleth refernce: [Leaflet](https://leafletjs.com/examples/choropleth/)
 
 ### Credit
 Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. 
