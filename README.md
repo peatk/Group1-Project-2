@@ -36,9 +36,10 @@ Website Template: [GymFit](https://demo.themefisher.com/gymfit/).
 
 Choropleth Refernce: [Leaflet](https://leafletjs.com/examples/choropleth/)
 
-Code Assistance: [ChatGPT](https://chat.openai.com/) 
+Code Assistance: 
+    1. [ChatGPT](https://chat.openai.com/) 
 
-EdX Instructors
+    2. EdX Instructors
 
 ### Credit
 Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. 
