@@ -12,7 +12,8 @@ Our analysis revealed alarming trends in the prevalence and nature of book bans 
 
 ### Installation
 
-Follow the steps below to access our Book Ban Webpage:
+Follow the steps below to access our Book Ban Webpage
+
     1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
     2. Clone the repository containing the necessary files.
     3. Using your terminal, navigate to the main directory of the cloned repository.
