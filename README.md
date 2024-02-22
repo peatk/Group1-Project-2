@@ -27,6 +27,7 @@ Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our databas
 
 ### References
 Data references: https://pen.org/banned-in-the-usa/#what
+
 Template for website pages is [GymFit](https://demo.themefisher.com/gymfit/).
 
 ### Credit
