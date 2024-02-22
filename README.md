@@ -30,7 +30,9 @@ Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our databas
 Transparency regarding the criteria and motivations behind book bans is crucial for fostering informed debate and safeguarding intellectual freedom. Additionally, ethical frameworks should prioritize the promotion of diversity and inclusion, recognizing that censorship disproportionately impacts marginalized voices and perpetuates systemic biases. Ultimately, any analysis of book ban data must be guided by a commitment to upholding democratic principles and protecting the rights of all individuals to engage with a wide range of ideas and perspectives.
 
 ### References
-Data Reference: [Pen America: A Freedom To Write](https://pen.org/banned-in-the-usa/#what)
+Data Reference:
+
+1. [Pen America: A Freedom To Write](https://pen.org/banned-in-the-usa/#what)
 
 Template Referemces: 
 1. [GymFit](https://demo.themefisher.com/gymfit/).
