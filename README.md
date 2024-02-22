@@ -17,27 +17,25 @@ Follow the steps below to access our Book Ban Webpage
     1. Begin by ensuring all dependencies related to Flask are installed as our data analysis relies on this framework.
     2. Clone the repository containing the necessary files.
     3. Using your terminal, navigate to the main directory of the cloned repository.
-    4. Execute the command python base.py in your terminal to initiate the Flask application.
-    5. Launch your preferred web browser and enter the appropriate URL to display the available API routes.
+    4. Execute the command 'python base.py' in your terminal to initiate the Flask application.
+    5. Launch your a chrome web browser and enter the appropriate URL to display the available API routes.
     6. To access our home page, append /index to the browser's URL and navigate accordingly.
     7. Happy browsing!!
 
+### Database
+Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our database which offers structured data management, efficient querying, scalability, and data integrity. These benefits facilitate data storage, management, analysis, and ensure the consistency, security, and reliability of the stored data compared to the raw .xlsx file.
+
+### References
+Data references: https://pen.org/banned-in-the-usa/#what
+Template for website pages is [GymFit](https://demo.themefisher.com/gymfit/).
+
 ### Credit
-
-Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. Template for website pages is [GymFit](https://demo.themefisher.com/gymfit/).
-
-
-
-An overview of the project and its purpose - done
+Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. 
 
 
 
-Documentation of the database used and why (e.g. benefits of SQL or NoSQL for this project)
 
-ETL workflow with diagrams or ERD
+
+ETL workflow with diagrams or ERD - i think t
 
 At least one paragraph summarizing efforts for ethical considerations made in the project
-
-References for the data source(s)
-
-References for any code used that is not your own
