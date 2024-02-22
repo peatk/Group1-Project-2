@@ -30,6 +30,28 @@ Our raw data originated from an Excel (.xlsx) file. We opted for SQLite as our d
 
 Transparency regarding the criteria and motivations behind book bans is crucial for fostering informed debate and safeguarding intellectual freedom. Additionally, ethical frameworks should prioritize the promotion of diversity and inclusion, recognizing that censorship disproportionately impacts marginalized voices and perpetuates systemic biases. Ultimately, any analysis of book ban data must be guided by a commitment to upholding democratic principles and protecting the rights of all individuals to engage with a wide range of ideas and perspectives.
 
+### Extract / Transform / Load Workflow
+
+##### JSON / SQLite ETL Workflow:
+
+1. Import necessary dependencies
+2. Establish a path for the raw .xlsx file
+3. Create an initial dataframe and inspect data types
+4. Remove null values and unnecessary columns
+5. Standardize column names using snake case
+6. Export the processed data to a JSON file
+7. Store the processed data in a SQLite database
+
+##### District Data ETL Workflow using GeoApify:
+
+1. Import required dependencies
+2. Utilize GeoApify to access geographical data
+3. Iterate through the dataframe to extract district information
+4. Append GeoApify URL with district names to retrieve specific data
+5. Retrieve coordinates (latitude and longitude) for each district
+6. Add latitude and longitude columns to the dataframe
+7. Export the processed data to a JSON file
+
 ### References
 Data Reference:
 
@@ -52,7 +74,3 @@ Code Assistance:
 
 ### Credit
 Code written by group members Seren Frazin, Pete Kline, Hok Yin Cheung, and Pallavi Deshmukh. 
-
-
-
-ETL workflow with diagrams or ERD - i think t
