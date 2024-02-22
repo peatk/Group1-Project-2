@@ -23,7 +23,8 @@ Follow the steps below to access our Book Ban Webpage
 7. Happy browsing!!
 
 ### Database
-Our raw data came from an excel (.xlsx) file. We chose PostgreSQL as our database which offers structured data management, efficient querying, scalability, and data integrity. These benefits facilitate data storage, management, analysis, and ensure the consistency, security, and reliability of the stored data compared to the raw .xlsx file.
+
+Our raw data originated from an Excel (.xlsx) file. We opted for SQLite as our database, which provides structured data management, efficient querying, scalability, and data integrity. These advantages streamline data storage, management, and analysis, while also ensuring consistency, security, and reliability compared to the original .xlsx file.
 
 ### Ethical Considerations
 
